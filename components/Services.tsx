@@ -30,7 +30,7 @@ const services = [
   },
   {
     title: 'Ongoing Business Support',
-    description: 'Continuous advisory and support services to ensure your business thrives in the UAE market. From annual renewals to strategic growth initiatives, we're here to support your success.',
+    description: "Continuous advisory and support services to ensure your business thrives in the UAE market. From annual renewals to strategic growth initiatives, we\'re here to support your success.",
     details: 'License renewals, visa processing, accounting support, legal compliance, and strategic business development.'
   },
 ];
@@ -45,7 +45,7 @@ export default function Services() {
             Our Services
           </h2>
           <p className="text-xl text-white/70 font-light leading-relaxed">
-            Comprehensive business development solutions tailored to your needs in the UAE market.
+            Everything you need to succeed in Dubai, all in one place. We&apos;ve got your back from day one through every step of your business journey.
           </p>
         </div>
 
