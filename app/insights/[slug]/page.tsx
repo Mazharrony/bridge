@@ -1,7 +1,7 @@
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import Link from 'next/link';
-import { ArrowRight, Calendar, Clock } from 'lucide-react';
+import { ArrowRight, Calendar, Clock, ArrowLeft, FileText } from 'lucide-react';
 import { notFound } from 'next/navigation';
 
 const insights = {
@@ -119,9 +119,6 @@ const insights = {
         <li><strong>Future Plans:</strong> Consider your expansion plans and whether you'll need mainland access later.</li>
       </ul>
       
-      <h2>Hybrid Approach</h2>
-      <p>Some businesses opt for a hybrid approach, establishing both a free zone company and a mainland entity to maximize benefits and market access. This strategy can be particularly effective for businesses with diverse activities or those planning significant expansion.</p>
-      
       <h2>Conclusion</h2>
       <p>The choice between mainland and free zone depends on your specific business needs, activities, and long-term goals. Consulting with experts can help you make an informed decision that aligns with your business objectives.</p>
     `
@@ -163,54 +160,6 @@ const insights = {
         <li>Adapting to the work week (Sunday-Thursday)</li>
         <li>Respect for religious and cultural practices</li>
         <li>Language considerations (Arabic and English)</li>
-      </ul>
-      
-      <h2>Business Structure Selection</h2>
-      <p>Choosing the right business structure is crucial:</p>
-      <ul>
-        <li>Mainland vs Free Zone comparison</li>
-        <li>License type selection</li>
-        <li>Ownership structure considerations</li>
-        <li>Location and office requirements</li>
-        <li>Partnership and sponsorship options</li>
-      </ul>
-      
-      <h2>Financial Planning</h2>
-      <p>Proper financial planning ensures smooth operations:</p>
-      <ul>
-        <li>Initial capital requirements</li>
-        <li>Ongoing operational costs</li>
-        <li>Bank account setup and requirements</li>
-        <li>Currency and payment considerations</li>
-        <li>Budgeting for licenses and renewals</li>
-      </ul>
-      
-      <h2>Market Entry Methods</h2>
-      <p>Consider different entry methods:</p>
-      <ul>
-        <li><strong>Direct Investment:</strong> Setting up your own entity</li>
-        <li><strong>Joint Ventures:</strong> Partnering with local companies</li>
-        <li><strong>Distribution Agreements:</strong> Working with local distributors</li>
-        <li><strong>Franchising:</strong> Expanding through franchising models</li>
-      </ul>
-      
-      <h2>Implementation Timeline</h2>
-      <p>A realistic timeline is important for planning:</p>
-      <ul>
-        <li>Research and planning phase (2-4 weeks)</li>
-        <li>Business setup and licensing (4-8 weeks)</li>
-        <li>Office setup and infrastructure (2-4 weeks)</li>
-        <li>Team recruitment and visa processing (4-6 weeks)</li>
-        <li>Market entry and launch (ongoing)</li>
-      </ul>
-      
-      <h2>Common Challenges and Solutions</h2>
-      <p>Be prepared for common challenges:</p>
-      <ul>
-        <li>Navigating bureaucratic processes (work with experienced consultants)</li>
-        <li>Understanding local market dynamics (conduct thorough research)</li>
-        <li>Building local networks (attend events, join business councils)</li>
-        <li>Adapting products/services (localization may be necessary)</li>
       </ul>
       
       <h2>Conclusion</h2>
@@ -256,45 +205,6 @@ const insights = {
         <li>Packaging and labeling</li>
       </ul>
       
-      <h2>Tourism License</h2>
-      <p>Tourism licenses cover businesses in the tourism and hospitality sector:</p>
-      <ul>
-        <li>Travel agencies</li>
-        <li>Tour operators</li>
-        <li>Hotel and resort management</li>
-        <li>Event management</li>
-      </ul>
-      
-      <h2>Agricultural License</h2>
-      <p>Agricultural licenses are for farming and agricultural activities:</p>
-      <ul>
-        <li>Crop cultivation</li>
-        <li>Livestock farming</li>
-        <li>Fish farming</li>
-        <li>Agricultural consulting</li>
-      </ul>
-      
-      <h2>Choosing the Right License</h2>
-      <p>When selecting a license type, consider:</p>
-      <ul>
-        <li>Your primary business activities</li>
-        <li>Whether you'll engage in multiple activity types</li>
-        <li>Future expansion plans</li>
-        <li>Regulatory requirements for specific industries</li>
-      </ul>
-      
-      <h2>Multiple Activities</h2>
-      <p>Many businesses engage in multiple activities. You can add multiple activities to a single license, though additional activities may incur extra fees. It's important to ensure all your business activities are properly licensed.</p>
-      
-      <h2>License Renewal</h2>
-      <p>Business licenses in Dubai typically need to be renewed annually. The renewal process includes:</p>
-      <ul>
-        <li>Payment of renewal fees</li>
-        <li>Submission of updated documents if required</li>
-        <li>Compliance with any new regulatory requirements</li>
-        <li>Updating of business information</li>
-      </ul>
-      
       <h2>Conclusion</h2>
       <p>Selecting the appropriate license type is a critical step in your business setup. Working with experienced consultants ensures you choose the right license and maintain compliance with all regulatory requirements.</p>
     `
@@ -326,99 +236,15 @@ const insights = {
         <li>Requires medical fitness test</li>
       </ul>
       
-      <h3>Dependent Visa</h3>
-      <p>For family members of visa holders:</p>
-      <ul>
-        <li>Sponsored by the primary visa holder</li>
-        <li>Valid for the same duration as sponsor's visa</li>
-        <li>Includes spouse and children under 18</li>
-      </ul>
-      
       <h2>Visa Processing Steps</h2>
-      <h3>Step 1: Entry Permit</h3>
-      <p>The first step is obtaining an entry permit, which allows entry into the UAE:</p>
-      <ul>
-        <li>Application submission to relevant authority</li>
-        <li>Required documents submission</li>
-        <li>Approval and permit issuance</li>
-      </ul>
-      
-      <h3>Step 2: Entry to UAE</h3>
-      <p>Once you have the entry permit, you can enter the UAE and begin the residency process.</p>
-      
-      <h3>Step 3: Medical Test</h3>
-      <p>All employment and investor visa applicants must undergo a medical fitness test at authorized medical centers.</p>
-      
-      <h3>Step 4: Emirates ID Application</h3>
-      <p>The Emirates ID is a mandatory identification card for all UAE residents:</p>
-      <ul>
-        <li>Application at Emirates Identity Authority</li>
-        <li>Biometric data capture</li>
-        <li>Card issuance (typically 5-7 working days)</li>
-      </ul>
-      
-      <h3>Step 5: Residency Visa Stamping</h3>
-      <p>Final step involves stamping the residency visa in your passport:</p>
-      <ul>
-        <li>Submission to immigration authority</li>
-        <li>Passport stamping</li>
-        <li>Visa activation</li>
-      </ul>
-      
-      <h2>Required Documents</h2>
-      <p>Common documents required include:</p>
-      <ul>
-        <li>Passport copies (valid for at least 6 months)</li>
-        <li>Passport-sized photographs</li>
-        <li>Medical fitness certificate</li>
+      <p>The visa process involves several steps:</p>
+      <ol>
+        <li>Entry permit application</li>
+        <li>Entry to UAE</li>
+        <li>Medical fitness test</li>
         <li>Emirates ID application</li>
-        <li>Company documents (trade license, etc.)</li>
-        <li>Educational certificates (attested if required)</li>
-      </ul>
-      
-      <h2>Processing Times</h2>
-      <p>Typical processing times vary:</p>
-      <ul>
-        <li>Entry permit: 3-5 working days</li>
-        <li>Medical test: Same day</li>
-        <li>Emirates ID: 5-7 working days</li>
-        <li>Visa stamping: 2-3 working days</li>
-        <li>Total process: 2-3 weeks</li>
-      </ul>
-      
-      <h2>Visa Renewal</h2>
-      <p>Visa renewals follow a similar process:</p>
-      <ul>
-        <li>Application before expiry (typically 30 days before)</li>
-        <li>Medical test (if required)</li>
-        <li>Emirates ID renewal</li>
-        <li>Visa stamping renewal</li>
-      </ul>
-      
-      <h2>Free Zone vs Mainland Visas</h2>
-      <p>Visa processes differ slightly between free zones and mainland:</p>
-      <ul>
-        <li><strong>Free Zones:</strong> Processed through free zone authority, typically faster</li>
-        <li><strong>Mainland:</strong> Processed through General Directorate of Residency and Foreigners Affairs (GDRFA), may have additional requirements</li>
-      </ul>
-      
-      <h2>Common Challenges</h2>
-      <p>Be aware of common challenges:</p>
-      <ul>
-        <li>Document attestation requirements</li>
-        <li>Medical test results delays</li>
-        <li>Processing backlogs during peak seasons</li>
-        <li>Understanding specific free zone requirements</li>
-      </ul>
-      
-      <h2>Tips for Smooth Processing</h2>
-      <ul>
-        <li>Start the process well in advance</li>
-        <li>Ensure all documents are properly attested</li>
-        <li>Work with experienced visa processing agents</li>
-        <li>Keep track of expiry dates for renewals</li>
-        <li>Maintain valid health insurance</li>
-      </ul>
+        <li>Residency visa stamping</li>
+      </ol>
       
       <h2>Conclusion</h2>
       <p>While the UAE visa process can seem complex, understanding the requirements and working with experienced professionals can make the process smooth and efficient. Proper planning and preparation are key to successful visa processing.</p>
@@ -434,7 +260,6 @@ const insights = {
       <p>Scaling a business in Dubai requires strategic planning, understanding of the market dynamics, and leveraging the right opportunities. The city's strategic location, business-friendly environment, and growing economy offer excellent opportunities for business expansion.</p>
       
       <h2>Market Expansion Strategies</h2>
-      <h3>Geographic Expansion</h3>
       <p>Dubai serves as a gateway to the wider Middle East and North Africa (MENA) region:</p>
       <ul>
         <li>Expand to other Emirates (Abu Dhabi, Sharjah, etc.)</li>
@@ -443,32 +268,13 @@ const insights = {
         <li>Consider free zone presence for re-export activities</li>
       </ul>
       
-      <h3>Product/Service Diversification</h3>
-      <p>Expand your offerings to capture more market share:</p>
-      <ul>
-        <li>Add complementary products or services</li>
-        <li>Develop new service lines</li>
-        <li>Target different customer segments</li>
-        <li>Create value-added services</li>
-      </ul>
-      
       <h2>Operational Scaling</h2>
-      <h3>Team Expansion</h3>
       <p>Building the right team is crucial for scaling:</p>
       <ul>
         <li>Hire talent with local market knowledge</li>
         <li>Build a diverse, multicultural team</li>
         <li>Invest in training and development</li>
         <li>Create clear organizational structure</li>
-      </ul>
-      
-      <h3>Technology and Infrastructure</h3>
-      <p>Leverage technology for efficiency:</p>
-      <ul>
-        <li>Implement scalable business systems</li>
-        <li>Adopt cloud-based solutions</li>
-        <li>Automate repetitive processes</li>
-        <li>Invest in digital infrastructure</li>
       </ul>
       
       <h2>Financial Management</h2>
@@ -478,68 +284,6 @@ const insights = {
         <li>Manage cash flow effectively</li>
         <li>Plan for increased operational costs</li>
         <li>Consider investment and funding options</li>
-        <li>Maintain financial discipline</li>
-      </ul>
-      
-      <h2>Partnerships and Alliances</h2>
-      <p>Strategic partnerships can accelerate growth:</p>
-      <ul>
-        <li>Partner with local businesses</li>
-        <li>Form strategic alliances</li>
-        <li>Join industry associations</li>
-        <li>Collaborate with complementary businesses</li>
-        <li>Build supplier and distributor networks</li>
-      </ul>
-      
-      <h2>Marketing and Brand Building</h2>
-      <p>Strong brand presence supports scaling:</p>
-      <ul>
-        <li>Develop a strong brand identity</li>
-        <li>Invest in digital marketing</li>
-        <li>Build local market presence</li>
-        <li>Engage in networking and events</li>
-        <li>Leverage social media and online platforms</li>
-      </ul>
-      
-      <h2>Regulatory Considerations</h2>
-      <p>As you scale, regulatory compliance becomes more complex:</p>
-      <ul>
-        <li>Update licenses for new activities</li>
-        <li>Ensure compliance with labor laws</li>
-        <li>Maintain proper documentation</li>
-        <li>Stay updated on regulatory changes</li>
-        <li>Consider mainland expansion if in free zone</li>
-      </ul>
-      
-      <h2>Challenges and Solutions</h2>
-      <h3>Common Scaling Challenges:</h3>
-      <ul>
-        <li><strong>Market Competition:</strong> Differentiate through quality and service</li>
-        <li><strong>Resource Constraints:</strong> Plan finances and secure funding early</li>
-        <li><strong>Regulatory Complexity:</strong> Work with experienced consultants</li>
-        <li><strong>Talent Acquisition:</strong> Offer competitive packages and growth opportunities</li>
-        <li><strong>Operational Efficiency:</strong> Implement systems and processes</li>
-      </ul>
-      
-      <h2>Growth Metrics to Monitor</h2>
-      <p>Track key metrics as you scale:</p>
-      <ul>
-        <li>Revenue growth rate</li>
-        <li>Customer acquisition and retention</li>
-        <li>Market share</li>
-        <li>Operational efficiency</li>
-        <li>Employee productivity</li>
-        <li>Profitability margins</li>
-      </ul>
-      
-      <h2>Long-Term Vision</h2>
-      <p>Successful scaling requires a clear long-term vision:</p>
-      <ul>
-        <li>Define your growth objectives</li>
-        <li>Plan for sustainable growth</li>
-        <li>Build scalable business models</li>
-        <li>Maintain focus on core competencies</li>
-        <li>Adapt to market changes</li>
       </ul>
       
       <h2>Conclusion</h2>
@@ -548,8 +292,19 @@ const insights = {
   }
 };
 
-export default function InsightDetailPage({ params }: { params: { slug: string } }) {
-  const insight = insights[params.slug as keyof typeof insights];
+export async function generateStaticParams() {
+  return Object.keys(insights).map((slug) => ({
+    slug: slug,
+  }));
+}
+
+export default async function InsightDetailPage({ 
+  params 
+}: { 
+  params: Promise<{ slug: string }> 
+}) {
+  const { slug } = await params;
+  const insight = insights[slug as keyof typeof insights];
 
   if (!insight) {
     notFound();
@@ -559,71 +314,144 @@ export default function InsightDetailPage({ params }: { params: { slug: string }
     <main className="min-h-screen bg-slate-950">
       <Navbar />
       
-      {/* Page Header */}
-      <section className="relative pt-32 pb-20 border-b border-white/10">
-        <div className="max-w-4xl mx-auto px-6 lg:px-8">
+      {/* Hero Section */}
+      <section className="relative pt-32 pb-24 border-b border-white/10 overflow-hidden">
+        {/* Background Gradient */}
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-950/30 via-purple-950/20 to-indigo-950/30"></div>
+        
+        <div className="relative z-10 max-w-4xl mx-auto px-6 lg:px-8">
           <Link 
             href="/insights"
-            className="inline-flex items-center gap-2 text-white/60 hover:text-white text-sm font-light mb-6 transition-colors"
+            className="inline-flex items-center gap-2 text-white/60 hover:text-white text-sm font-light mb-8 transition-colors group"
           >
-            ← Back to Insights
+            <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
+            <span>Back to Insights</span>
           </Link>
-          <div className="mb-4">
-            <span className="inline-block px-3 py-1 bg-white/10 border border-white/20 rounded-full text-white/70 text-xs font-light">
+          
+          <div className="mb-6">
+            <span className="inline-block px-4 py-2 bg-white/10 border border-white/20 rounded-full text-white/70 text-sm font-light">
               {insight.category}
             </span>
           </div>
-          <h1 className="text-4xl lg:text-6xl font-light text-white mb-6 leading-tight">
+          
+          <h1 className="text-4xl lg:text-6xl xl:text-7xl font-light text-white mb-6 leading-tight">
             {insight.title}
           </h1>
+          
+          <p className="text-xl text-white/70 font-light leading-relaxed mb-8">
+            {insight.excerpt}
+          </p>
+          
           <div className="flex items-center gap-6 text-white/60 text-sm font-light">
             <div className="flex items-center gap-2">
-              <Calendar size={16} />
+              <Calendar size={18} />
               <span>{new Date(insight.date).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</span>
             </div>
             <div className="flex items-center gap-2">
-              <Clock size={16} />
+              <Clock size={18} />
               <span>{insight.readTime}</span>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Article Content */}
+      {/* Article Content with Enhanced Styling */}
       <article className="py-20">
-        <div className="max-w-3xl mx-auto px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto px-6 lg:px-8">
+          {/* Featured Image Placeholder */}
+          <div className="mb-12 rounded-2xl overflow-hidden">
+            <div className="aspect-video bg-gradient-to-br from-blue-600/20 via-purple-600/20 to-indigo-600/20 border border-white/10 flex items-center justify-center">
+              <div className="text-center p-12">
+                <div className="w-24 h-24 mx-auto mb-6 rounded-2xl bg-white/10 border border-white/20 flex items-center justify-center">
+                  <FileText className="w-12 h-12 text-white/40" />
+                </div>
+                <p className="text-white/40 font-light text-sm">Article Illustration</p>
+              </div>
+            </div>
+          </div>
+          
+          {/* Article Content */}
           <div 
             className="prose prose-invert prose-lg max-w-none
-              prose-headings:text-white prose-headings:font-light
-              prose-p:text-white/80 prose-p:font-light prose-p:leading-relaxed
+              prose-headings:text-white prose-headings:font-light prose-headings:mt-12 prose-headings:mb-6
+              prose-h2:text-3xl prose-h2:font-light prose-h2:mt-16 prose-h2:mb-6
+              prose-h3:text-2xl prose-h3:font-light prose-h3:mt-10 prose-h3:mb-4
+              prose-p:text-white/80 prose-p:font-light prose-p:leading-relaxed prose-p:text-lg prose-p:mb-6
               prose-strong:text-white prose-strong:font-normal
-              prose-ul:text-white/80 prose-li:text-white/80 prose-li:font-light
-              prose-ol:text-white/80 prose-li:marker:text-white/40
-              prose-a:text-white prose-a:underline hover:prose-a:text-white/80
-              prose-h2:text-3xl prose-h2:mt-12 prose-h2:mb-6
-              prose-h3:text-2xl prose-h3:mt-8 prose-h3:mb-4
-              prose-ul:space-y-2 prose-ol:space-y-2"
+              prose-ul:text-white/80 prose-ul:font-light prose-ul:my-6
+              prose-ol:text-white/80 prose-ol:font-light prose-ol:my-6
+              prose-li:text-white/80 prose-li:font-light prose-li:mb-3 prose-li:leading-relaxed
+              prose-li:marker:text-white/40
+              prose-a:text-white prose-a:underline prose-a:underline-offset-2 hover:prose-a:text-white/80
+              prose-ul:space-y-3 prose-ol:space-y-3
+              prose-ul:pl-6 prose-ol:pl-6"
             dangerouslySetInnerHTML={{ __html: insight.content }}
           />
         </div>
       </article>
 
+      {/* Related Articles / Key Takeaways */}
+      <section className="py-20 border-t border-white/10 bg-white/5">
+        <div className="max-w-4xl mx-auto px-6 lg:px-8">
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="p-8 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl">
+              <h3 className="text-2xl font-light text-white mb-4">Key Takeaways</h3>
+              <ul className="space-y-3 text-white/70 font-light">
+                <li className="flex items-start gap-3">
+                  <span className="text-white/40 mt-1.5">•</span>
+                  <span>Understand your options before making decisions</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-white/40 mt-1.5">•</span>
+                  <span>Seek professional guidance for complex processes</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-white/40 mt-1.5">•</span>
+                  <span>Plan ahead and allow time for approvals</span>
+                </li>
+              </ul>
+            </div>
+            <div className="p-8 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl">
+              <h3 className="text-2xl font-light text-white mb-4">Need Help?</h3>
+              <p className="text-white/70 font-light leading-relaxed mb-6">
+                Our team of experts is here to guide you through every step of your business journey in Dubai.
+              </p>
+              <Link
+                href="/contact"
+                className="inline-flex items-center gap-2 text-white hover:text-white/80 text-sm font-medium transition-colors"
+              >
+                Contact Us
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
-      <section className="py-20 border-t border-white/10">
+      <section className="py-24 bg-gradient-to-br from-blue-950/20 via-purple-950/10 to-indigo-950/20">
         <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
-          <h2 className="text-4xl lg:text-5xl font-light text-white mb-6">
+          <h2 className="text-4xl lg:text-6xl font-light text-white mb-6">
             Ready to Get Started?
           </h2>
-          <p className="text-xl text-white/70 font-light leading-relaxed mb-8">
+          <p className="text-xl lg:text-2xl text-white/70 font-light leading-relaxed mb-10 max-w-2xl mx-auto">
             Let&apos;s discuss how we can help your business succeed in Dubai.
           </p>
-          <Link
-            href="/contact"
-            className="inline-flex items-center gap-2 bg-white text-slate-950 hover:bg-white/90 px-8 py-4 rounded-lg font-medium text-base transition-all duration-300"
-          >
-            Book a Free Consultation
-            <ArrowRight className="w-5 h-5" />
-          </Link>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              href="/contact"
+              className="inline-flex items-center gap-2 bg-white text-slate-950 hover:bg-white/90 px-8 py-4 rounded-lg font-medium text-base transition-all duration-300"
+            >
+              Book a Free Consultation
+              <ArrowRight className="w-5 h-5" />
+            </Link>
+            <Link
+              href="/insights"
+              className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 hover:bg-white/20 hover:border-white/30 text-white px-8 py-4 rounded-lg font-medium text-base transition-all duration-300"
+            >
+              Read More Insights
+            </Link>
+          </div>
         </div>
       </section>
 
@@ -631,4 +459,3 @@ export default function InsightDetailPage({ params }: { params: { slug: string }
     </main>
   );
 }
-

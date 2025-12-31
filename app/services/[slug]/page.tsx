@@ -1,7 +1,7 @@
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import Link from 'next/link';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, CheckCircle2, TrendingUp, Users, Shield, Briefcase, Building2, FileText } from 'lucide-react';
 import { notFound } from 'next/navigation';
 
 const services = {
@@ -9,6 +9,7 @@ const services = {
     title: 'Market Entry Strategy',
     description: 'Comprehensive analysis and strategic planning for entering the UAE market with confidence and clarity.',
     overview: 'Our market entry strategy service helps you navigate the complexities of entering the UAE market with a clear, actionable plan tailored to your business objectives.',
+    icon: TrendingUp,
     content: {
       introduction: 'Entering a new market requires careful planning and deep understanding of local dynamics. Our Market Entry Strategy service provides you with comprehensive analysis and strategic recommendations to ensure your successful entry into the UAE market.',
       whatWeDo: [
@@ -57,6 +58,7 @@ const services = {
     title: 'Business Setup & Licensing',
     description: 'End-to-end support for company formation, licensing, and regulatory compliance in Dubai.',
     overview: 'We handle every aspect of your business setup, from initial documentation to final approvals, ensuring a smooth and compliant establishment in Dubai.',
+    icon: FileText,
     content: {
       introduction: 'Setting up a business in Dubai involves navigating various regulatory requirements, licensing procedures, and documentation. Our Business Setup & Licensing service handles all aspects of the process, making it smooth and stress-free for you.',
       whatWeDo: [
@@ -105,6 +107,7 @@ const services = {
     title: 'Corporate Advisory',
     description: 'Strategic guidance for growth, expansion, and optimization of your business operations.',
     overview: 'Our corporate advisory services provide strategic insights and guidance to help your business grow, expand, and optimize operations in the UAE market.',
+    icon: Briefcase,
     content: {
       introduction: 'Growing and optimizing your business in the UAE requires strategic thinking and expert guidance. Our Corporate Advisory services provide you with the insights and recommendations needed to make informed decisions and achieve your business objectives.',
       whatWeDo: [
@@ -153,6 +156,7 @@ const services = {
     title: 'Free Zone Solutions',
     description: 'Expert consultation on free zone options and benefits for international businesses.',
     overview: 'We help you select the optimal free zone, understand benefits and regulations, and guide you through the complete setup process for your business.',
+    icon: Building2,
     content: {
       introduction: 'Dubai offers numerous free zones, each with unique benefits and regulations. Our Free Zone Solutions service helps you navigate these options and select the best free zone for your business needs, then guides you through the complete setup process.',
       whatWeDo: [
@@ -201,6 +205,7 @@ const services = {
     title: 'Mainland Company Setup',
     description: 'Complete support for mainland company registration and local partnership requirements.',
     overview: 'Comprehensive support for mainland company registration, including local sponsor arrangements and full compliance with UAE mainland regulations.',
+    icon: Building2,
     content: {
       introduction: 'Mainland company setup allows you to operate anywhere in the UAE and directly trade with the local market. Our Mainland Company Setup service provides complete support for registration, licensing, and compliance with mainland regulations.',
       whatWeDo: [
@@ -249,6 +254,7 @@ const services = {
     title: 'Ongoing Business Support',
     description: 'Continuous advisory and support services to ensure your business thrives in the UAE market.',
     overview: 'Beyond setup, we provide ongoing support including license renewals, compliance management, and strategic guidance for long-term success.',
+    icon: Shield,
     content: {
       introduction: 'Business success requires ongoing support and maintenance. Our Ongoing Business Support service ensures your business remains compliant, optimized, and positioned for growth in the UAE market.',
       whatWeDo: [
@@ -295,111 +301,224 @@ const services = {
   }
 };
 
-export default function ServiceDetailPage({ params }: { params: { slug: string } }) {
-  const service = services[params.slug as keyof typeof services];
+export async function generateStaticParams() {
+  return Object.keys(services).map((slug) => ({
+    slug: slug,
+  }));
+}
+
+export default async function ServiceDetailPage({ 
+  params 
+}: { 
+  params: Promise<{ slug: string }> 
+}) {
+  const { slug } = await params;
+  const service = services[slug as keyof typeof services];
 
   if (!service) {
     notFound();
   }
 
+  const Icon = service.icon;
+
   return (
     <main className="min-h-screen bg-slate-950">
       <Navbar />
       
-      {/* Page Header */}
-      <section className="relative pt-32 pb-20 border-b border-white/10">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="max-w-3xl">
+      {/* Hero Section with Gradient Background */}
+      <section className="relative pt-32 pb-24 border-b border-white/10 overflow-hidden">
+        {/* Background Gradient */}
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-950/30 via-purple-950/20 to-indigo-950/30"></div>
+        
+        <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="max-w-4xl">
             <Link 
               href="/services"
-              className="inline-flex items-center gap-2 text-white/60 hover:text-white text-sm font-light mb-6 transition-colors"
+              className="inline-flex items-center gap-2 text-white/60 hover:text-white text-sm font-light mb-8 transition-colors group"
             >
-              ← Back to Services
+              <ArrowRight className="w-4 h-4 rotate-180 group-hover:-translate-x-1 transition-transform" />
+              <span>Back to Services</span>
             </Link>
+            
+            {/* Icon and Title */}
+            <div className="flex items-center gap-4 mb-6">
+              <div className="p-4 bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl">
+                <Icon className="w-8 h-8 text-white" />
+              </div>
+              <div>
+                <span className="inline-block px-3 py-1 bg-white/10 border border-white/20 rounded-full text-white/70 text-xs font-light mb-3">
+                  Service
+                </span>
+              </div>
+            </div>
+            
             <h1 className="text-5xl lg:text-7xl font-light text-white mb-6 leading-tight">
               {service.title}
             </h1>
-            <p className="text-xl text-white/70 font-light leading-relaxed">
+            <p className="text-xl lg:text-2xl text-white/70 font-light leading-relaxed max-w-3xl">
               {service.overview}
             </p>
           </div>
         </div>
       </section>
 
-      {/* Main Content */}
-      <section className="py-20">
+      {/* Introduction Section */}
+      <section className="py-20 border-b border-white/10">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
-          <div className="space-y-16">
-            {/* Introduction */}
-            <div>
-              <h2 className="text-3xl font-light text-white mb-6">Overview</h2>
-              <p className="text-lg text-white/80 font-light leading-relaxed">
-                {service.content.introduction}
-              </p>
-            </div>
+          <div className="prose prose-invert prose-lg max-w-none
+            prose-p:text-white/80 prose-p:font-light prose-p:leading-relaxed prose-p:text-lg
+            prose-strong:text-white prose-strong:font-normal">
+            <p className="text-xl leading-relaxed">
+              {service.content.introduction}
+            </p>
+          </div>
+        </div>
+      </section>
 
-            {/* What We Do */}
-            <div>
-              <h2 className="text-3xl font-light text-white mb-6">What We Do</h2>
-              <ul className="space-y-4">
-                {service.content.whatWeDo.map((item, index) => (
-                  <li key={index} className="flex items-start gap-4">
-                    <span className="text-white/40 mt-2">•</span>
-                    <span className="text-white/80 font-light leading-relaxed">{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            {/* Benefits */}
-            <div>
-              <h2 className="text-3xl font-light text-white mb-6">Key Benefits</h2>
-              <div className="grid md:grid-cols-2 gap-4">
-                {service.content.benefits.map((benefit, index) => (
-                  <div key={index} className="p-4 bg-white/5 border border-white/10 rounded-lg">
-                    <p className="text-white/80 font-light">{benefit}</p>
-                  </div>
-                ))}
+      {/* What We Do Section */}
+      <section className="py-20 bg-white/5 border-b border-white/10">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="mb-12">
+            <h2 className="text-4xl lg:text-5xl font-light text-white mb-4">
+              What We Do
+            </h2>
+            <p className="text-xl text-white/60 font-light">
+              Comprehensive services tailored to your business needs
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 gap-6">
+            {service.content.whatWeDo.map((item, index) => (
+              <div
+                key={index}
+                className="flex items-start gap-4 p-6 bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl hover:bg-white/10 hover:border-white/20 transition-all duration-300"
+              >
+                <div className="flex-shrink-0 mt-1">
+                  <CheckCircle2 className="w-5 h-5 text-white/60" />
+                </div>
+                <p className="text-white/80 font-light leading-relaxed flex-1">{item}</p>
               </div>
-            </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-            {/* Process */}
-            <div>
-              <h2 className="text-3xl font-light text-white mb-6">Our Process</h2>
-              <div className="space-y-6">
-                {service.content.process.map((step, index) => (
-                  <div key={index} className="p-6 bg-white/5 border border-white/10 rounded-xl">
-                    <div className="flex items-start gap-4">
-                      <span className="text-2xl font-light text-white/40">{String(index + 1).padStart(2, '0')}</span>
-                      <div>
-                        <h3 className="text-xl font-normal text-white mb-2">{step.step}</h3>
-                        <p className="text-white/70 font-light leading-relaxed">{step.description}</p>
-                      </div>
-                    </div>
+      {/* Benefits Section */}
+      <section className="py-20 border-b border-white/10">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="mb-12 text-center max-w-3xl mx-auto">
+            <h2 className="text-4xl lg:text-5xl font-light text-white mb-4">
+              Key Benefits
+            </h2>
+            <p className="text-xl text-white/60 font-light">
+              Why choose our {service.title.toLowerCase()} service
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {service.content.benefits.map((benefit, index) => (
+              <div
+                key={index}
+                className="p-8 bg-gradient-to-br from-white/5 to-white/5 backdrop-blur-sm border border-white/10 rounded-2xl hover:bg-gradient-to-br hover:from-white/10 hover:to-white/5 hover:border-white/20 transition-all duration-300 group"
+              >
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center group-hover:bg-white/20 transition-colors">
+                    <span className="text-white/80 font-light text-lg">{index + 1}</span>
                   </div>
-                ))}
+                </div>
+                <p className="text-white/90 font-light leading-relaxed text-lg">{benefit}</p>
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Process Section */}
+      <section className="py-20 bg-white/5 border-b border-white/10">
+        <div className="max-w-6xl mx-auto px-6 lg:px-8">
+          <div className="mb-12 text-center max-w-3xl mx-auto">
+            <h2 className="text-4xl lg:text-5xl font-light text-white mb-4">
+              Our Process
+            </h2>
+            <p className="text-xl text-white/60 font-light">
+              A streamlined approach to deliver results
+            </p>
+          </div>
+          
+          <div className="space-y-8">
+            {service.content.process.map((step, index) => (
+              <div
+                key={index}
+                className="flex gap-8 items-start p-8 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl hover:bg-white/10 hover:border-white/20 transition-all duration-300 group"
+              >
+                {/* Step Number */}
+                <div className="flex-shrink-0">
+                  <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-600/20 to-purple-600/20 border border-white/10 flex items-center justify-center group-hover:from-blue-600/30 group-hover:to-purple-600/30 transition-all">
+                    <span className="text-3xl font-light text-white/60 group-hover:text-white transition-colors">
+                      {String(index + 1).padStart(2, '0')}
+                    </span>
+                  </div>
+                </div>
+                
+                {/* Step Content */}
+                <div className="flex-1 pt-2">
+                  <h3 className="text-2xl font-normal text-white mb-3 group-hover:text-white transition-colors">
+                    {step.step}
+                  </h3>
+                  <p className="text-white/70 font-light leading-relaxed text-lg">
+                    {step.description}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Stats/Callout Section */}
+      <section className="py-20 border-b border-white/10">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="text-center p-8 bg-white/5 border border-white/10 rounded-2xl">
+              <div className="text-4xl font-light text-white mb-3">500+</div>
+              <p className="text-white/70 font-light">Businesses Supported</p>
+            </div>
+            <div className="text-center p-8 bg-white/5 border border-white/10 rounded-2xl">
+              <div className="text-4xl font-light text-white mb-3">10+</div>
+              <p className="text-white/70 font-light">Years Experience</p>
+            </div>
+            <div className="text-center p-8 bg-white/5 border border-white/10 rounded-2xl">
+              <div className="text-4xl font-light text-white mb-3">95%</div>
+              <p className="text-white/70 font-light">Client Satisfaction</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 border-t border-white/10">
+      <section className="py-24 bg-gradient-to-br from-blue-950/20 via-purple-950/10 to-indigo-950/20">
         <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
-          <h2 className="text-4xl lg:text-5xl font-light text-white mb-6">
+          <h2 className="text-4xl lg:text-6xl font-light text-white mb-6">
             Ready to Get Started?
           </h2>
-          <p className="text-xl text-white/70 font-light leading-relaxed mb-8">
+          <p className="text-xl lg:text-2xl text-white/70 font-light leading-relaxed mb-10 max-w-2xl mx-auto">
             Let&apos;s discuss how {service.title} can help your business succeed in Dubai.
           </p>
-          <Link
-            href="/contact"
-            className="inline-flex items-center gap-2 bg-white text-slate-950 hover:bg-white/90 px-8 py-4 rounded-lg font-medium text-base transition-all duration-300"
-          >
-            Book a Free Consultation
-            <ArrowRight className="w-5 h-5" />
-          </Link>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              href="/contact"
+              className="inline-flex items-center gap-2 bg-white text-slate-950 hover:bg-white/90 px-8 py-4 rounded-lg font-medium text-base transition-all duration-300"
+            >
+              Book a Free Consultation
+              <ArrowRight className="w-5 h-5" />
+            </Link>
+            <Link
+              href="/services"
+              className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 hover:bg-white/20 hover:border-white/30 text-white px-8 py-4 rounded-lg font-medium text-base transition-all duration-300"
+            >
+              View All Services
+            </Link>
+          </div>
         </div>
       </section>
 
@@ -407,4 +526,3 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
     </main>
   );
 }
-
