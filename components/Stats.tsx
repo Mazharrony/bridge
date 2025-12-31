@@ -1,5 +1,7 @@
 'use client';
 
+import { FadeInUp, StaggerContainer, StaggerItem } from './motion-wrapper';
+
 const stats = [
   {
     number: '500+',
@@ -38,36 +40,35 @@ export default function Stats() {
     <section className="relative py-32 bg-gradient-to-b from-slate-950 to-blue-950/20 border-t border-white/5">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* Section Header */}
-        <div className="mb-20 max-w-3xl mx-auto text-center">
+        <FadeInUp className="mb-20 max-w-3xl mx-auto text-center">
           <h2 className="text-5xl lg:text-7xl font-light text-white mb-6 leading-tight">
             Our Track Record
           </h2>
           <p className="text-xl text-white/70 font-light leading-relaxed">
             Numbers that speak to our commitment to your success. We&apos;re proud of what we&apos;ve achieved together with our clients.
           </p>
-        </div>
+        </FadeInUp>
 
         {/* Stats Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <StaggerContainer className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {stats.map((stat, index) => (
-            <div
-              key={index}
-              className="p-8 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl hover:bg-white/10 hover:border-white/20 transition-all duration-500 text-center"
-            >
-              <div className="mb-4">
-                <span className="text-5xl lg:text-6xl font-light text-white">
-                  {stat.number}
-                </span>
+            <StaggerItem key={index}>
+              <div className="p-8 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl hover:bg-white/10 hover:border-white/20 transition-all duration-500 text-center">
+                <div className="mb-4">
+                  <span className="text-5xl lg:text-6xl font-light text-white">
+                    {stat.number}
+                  </span>
+                </div>
+                <h3 className="text-xl font-normal text-white mb-3">
+                  {stat.label}
+                </h3>
+                <p className="text-white/60 font-light leading-relaxed text-sm">
+                  {stat.description}
+                </p>
               </div>
-              <h3 className="text-xl font-normal text-white mb-3">
-                {stat.label}
-              </h3>
-              <p className="text-white/60 font-light leading-relaxed text-sm">
-                {stat.description}
-              </p>
-            </div>
+            </StaggerItem>
           ))}
-        </div>
+        </StaggerContainer>
       </div>
     </section>
   );

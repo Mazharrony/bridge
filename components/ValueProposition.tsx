@@ -1,5 +1,7 @@
 'use client';
 
+import { FadeInUp, StaggerContainer, StaggerItem } from './motion-wrapper';
+
 const values = [
   {
     title: 'Friendly & Approachable',
@@ -24,31 +26,30 @@ export default function ValueProposition() {
     <section className="relative py-32 bg-gradient-to-b from-blue-950/20 to-slate-950 border-t border-white/5">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* Section Header */}
-        <div className="mb-20 max-w-3xl mx-auto text-center">
+        <FadeInUp className="mb-20 max-w-3xl mx-auto text-center">
           <h2 className="text-5xl lg:text-7xl font-light text-white mb-6 leading-tight">
             The BRIDGE Difference
           </h2>
           <p className="text-xl text-white/70 font-light leading-relaxed">
             What makes working with us a great experience? It&apos;s our commitment to being the kind of business partner you actually want to work with.
           </p>
-        </div>
+        </FadeInUp>
 
         {/* Values Grid */}
-        <div className="grid md:grid-cols-2 gap-8">
+        <StaggerContainer className="grid md:grid-cols-2 gap-8">
           {values.map((value, index) => (
-            <div
-              key={index}
-              className="p-8 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl hover:bg-white/10 hover:border-white/20 transition-all duration-500"
-            >
-              <h3 className="text-2xl font-normal text-white mb-4">
-                {value.title}
-              </h3>
-              <p className="text-white/60 font-light leading-relaxed">
-                {value.description}
-              </p>
-            </div>
+            <StaggerItem key={index}>
+              <div className="p-8 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl hover:bg-white/10 hover:border-white/20 transition-all duration-500">
+                <h3 className="text-2xl font-normal text-white mb-4">
+                  {value.title}
+                </h3>
+                <p className="text-white/60 font-light leading-relaxed">
+                  {value.description}
+                </p>
+              </div>
+            </StaggerItem>
           ))}
-        </div>
+        </StaggerContainer>
       </div>
     </section>
   );

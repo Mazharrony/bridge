@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
+import { FadeInUp, StaggerContainer, StaggerItem } from './motion-wrapper';
 
 const services = [
   {
@@ -47,36 +48,37 @@ export default function Services() {
     <section id="services" className="relative py-32 bg-slate-950 border-t border-white/5">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* Section Header */}
-        <div className="mb-20 max-w-3xl">
+        <FadeInUp className="mb-20 max-w-3xl">
           <h2 className="text-5xl lg:text-7xl font-light text-white mb-6 leading-tight">
             Our Services
           </h2>
           <p className="text-xl text-white/70 font-light leading-relaxed">
             Everything you need to succeed in Dubai, all in one place. We&apos;ve got your back from day one through every step of your business journey.
           </p>
-        </div>
+        </FadeInUp>
 
         {/* Services Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <StaggerContainer className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
-            <Link
-              key={index}
-              href={`/services/${service.slug}`}
-              className="group p-8 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl hover:bg-white/10 hover:border-white/20 transition-all duration-500 block"
-            >
-              <h3 className="text-2xl font-normal text-white mb-4 group-hover:text-white transition-colors">
-                {service.title}
-              </h3>
-              <p className="text-white/60 font-light leading-relaxed mb-6">
-                {service.description}
-              </p>
-              <div className="flex items-center text-white/80 text-sm font-medium group-hover:gap-3 transition-all">
-                <span>Learn More</span>
-                <ArrowRight className="w-4 h-4 group-hover:translate-x-2 transition-transform opacity-0 group-hover:opacity-100" />
-              </div>
-            </Link>
+            <StaggerItem key={index}>
+              <Link
+                href={`/services/${service.slug}`}
+                className="group p-8 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl hover:bg-white/10 hover:border-white/20 transition-all duration-500 block"
+              >
+                <h3 className="text-2xl font-normal text-white mb-4 group-hover:text-white transition-colors">
+                  {service.title}
+                </h3>
+                <p className="text-white/60 font-light leading-relaxed mb-6">
+                  {service.description}
+                </p>
+                <div className="flex items-center text-white/80 text-sm font-medium group-hover:gap-3 transition-all">
+                  <span>Learn More</span>
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-2 transition-transform opacity-0 group-hover:opacity-100" />
+                </div>
+              </Link>
+            </StaggerItem>
           ))}
-        </div>
+        </StaggerContainer>
       </div>
     </section>
   );

@@ -1,5 +1,7 @@
 'use client';
 
+import { FadeInUp, StaggerContainer, StaggerItem } from './motion-wrapper';
+
 const industries = [
   {
     name: 'Technology & Software',
@@ -44,31 +46,30 @@ export default function Industries() {
     <section className="relative py-32 bg-slate-950 border-t border-white/5">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* Section Header */}
-        <div className="mb-20 max-w-3xl">
+        <FadeInUp className="mb-20 max-w-3xl">
           <h2 className="text-5xl lg:text-7xl font-light text-white mb-6 leading-tight">
             Industries We Serve
           </h2>
           <p className="text-xl text-white/70 font-light leading-relaxed">
             No matter what industry you&apos;re in, we&apos;ve got the experience and expertise to help you succeed in Dubai. Our team has worked with businesses across all sectors.
           </p>
-        </div>
+        </FadeInUp>
 
         {/* Industries Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <StaggerContainer className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {industries.map((industry, index) => (
-            <div
-              key={index}
-              className="p-6 bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl hover:bg-white/10 hover:border-white/20 transition-all duration-500"
-            >
+            <StaggerItem key={index}>
+              <div className="p-6 bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl hover:bg-white/10 hover:border-white/20 transition-all duration-500">
               <h3 className="text-xl font-normal text-white mb-3">
                 {industry.name}
               </h3>
               <p className="text-white/60 font-light leading-relaxed text-sm">
                 {industry.description}
               </p>
-            </div>
+              </div>
+            </StaggerItem>
           ))}
-        </div>
+        </StaggerContainer>
 
         {/* Call to Action */}
         <div className="mt-16 text-center">

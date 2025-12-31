@@ -3,6 +3,7 @@ import Footer from '@/components/Footer';
 import Link from 'next/link';
 import { ArrowRight, CheckCircle2, TrendingUp, Users, Shield, Briefcase, Building2, FileText } from 'lucide-react';
 import { notFound } from 'next/navigation';
+import { FadeInUp, StaggerContainer, StaggerItem } from '@/components/motion-wrapper';
 
 const services = {
   'market-entry-strategy': {
@@ -331,7 +332,7 @@ export default async function ServiceDetailPage({
         <div className="absolute inset-0 bg-gradient-to-br from-blue-950/30 via-purple-950/20 to-indigo-950/30"></div>
         
         <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="max-w-4xl">
+          <FadeInUp className="max-w-4xl">
             <Link 
               href="/services"
               className="inline-flex items-center gap-2 text-white/60 hover:text-white text-sm font-light mb-8 transition-colors group"
@@ -358,13 +359,13 @@ export default async function ServiceDetailPage({
             <p className="text-xl lg:text-2xl text-white/70 font-light leading-relaxed max-w-3xl">
               {service.overview}
             </p>
-          </div>
+          </FadeInUp>
         </div>
       </section>
 
       {/* Introduction Section */}
       <section className="py-20 border-b border-white/10">
-        <div className="max-w-4xl mx-auto px-6 lg:px-8">
+        <FadeInUp className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="prose prose-invert prose-lg max-w-none
             prose-p:text-white/80 prose-p:font-light prose-p:leading-relaxed prose-p:text-lg
             prose-strong:text-white prose-strong:font-normal">
@@ -372,132 +373,129 @@ export default async function ServiceDetailPage({
               {service.content.introduction}
             </p>
           </div>
-        </div>
+        </FadeInUp>
       </section>
 
       {/* What We Do Section */}
       <section className="py-20 bg-white/5 border-b border-white/10">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="mb-12">
+          <FadeInUp className="mb-12">
             <h2 className="text-4xl lg:text-5xl font-light text-white mb-4">
               What We Do
             </h2>
             <p className="text-xl text-white/60 font-light">
               Comprehensive services tailored to your business needs
             </p>
-          </div>
+          </FadeInUp>
           
-          <div className="grid md:grid-cols-2 gap-6">
+          <StaggerContainer className="grid md:grid-cols-2 gap-6">
             {service.content.whatWeDo.map((item, index) => (
-              <div
-                key={index}
-                className="flex items-start gap-4 p-6 bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl hover:bg-white/10 hover:border-white/20 transition-all duration-300"
-              >
-                <div className="flex-shrink-0 mt-1">
-                  <CheckCircle2 className="w-5 h-5 text-white/60" />
+              <StaggerItem key={index}>
+                <div className="flex items-start gap-4 p-6 bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl hover:bg-white/10 hover:border-white/20 transition-all duration-300">
+                  <div className="flex-shrink-0 mt-1">
+                    <CheckCircle2 className="w-5 h-5 text-white/60" />
+                  </div>
+                  <p className="text-white/80 font-light leading-relaxed flex-1">{item}</p>
                 </div>
-                <p className="text-white/80 font-light leading-relaxed flex-1">{item}</p>
-              </div>
+              </StaggerItem>
             ))}
-          </div>
+          </StaggerContainer>
         </div>
       </section>
 
       {/* Benefits Section */}
       <section className="py-20 border-b border-white/10">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="mb-12 text-center max-w-3xl mx-auto">
+          <FadeInUp className="mb-12 text-center max-w-3xl mx-auto">
             <h2 className="text-4xl lg:text-5xl font-light text-white mb-4">
               Key Benefits
             </h2>
             <p className="text-xl text-white/60 font-light">
               Why choose our {service.title.toLowerCase()} service
             </p>
-          </div>
+          </FadeInUp>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <StaggerContainer className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {service.content.benefits.map((benefit, index) => (
-              <div
-                key={index}
-                className="p-8 bg-gradient-to-br from-white/5 to-white/5 backdrop-blur-sm border border-white/10 rounded-2xl hover:bg-gradient-to-br hover:from-white/10 hover:to-white/5 hover:border-white/20 transition-all duration-300 group"
-              >
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center group-hover:bg-white/20 transition-colors">
-                    <span className="text-white/80 font-light text-lg">{index + 1}</span>
+              <StaggerItem key={index}>
+                <div className="p-8 bg-gradient-to-br from-white/5 to-white/5 backdrop-blur-sm border border-white/10 rounded-2xl hover:bg-gradient-to-br hover:from-white/10 hover:to-white/5 hover:border-white/20 transition-all duration-300 group">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center group-hover:bg-white/20 transition-colors">
+                      <span className="text-white/80 font-light text-lg">{index + 1}</span>
+                    </div>
                   </div>
+                  <p className="text-white/90 font-light leading-relaxed text-lg">{benefit}</p>
                 </div>
-                <p className="text-white/90 font-light leading-relaxed text-lg">{benefit}</p>
-              </div>
+              </StaggerItem>
             ))}
-          </div>
+          </StaggerContainer>
         </div>
       </section>
 
       {/* Process Section */}
       <section className="py-20 bg-white/5 border-b border-white/10">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
-          <div className="mb-12 text-center max-w-3xl mx-auto">
+          <FadeInUp className="mb-12 text-center max-w-3xl mx-auto">
             <h2 className="text-4xl lg:text-5xl font-light text-white mb-4">
               Our Process
             </h2>
             <p className="text-xl text-white/60 font-light">
               A streamlined approach to deliver results
             </p>
-          </div>
+          </FadeInUp>
           
-          <div className="space-y-8">
+          <StaggerContainer className="space-y-8">
             {service.content.process.map((step, index) => (
-              <div
-                key={index}
-                className="flex gap-8 items-start p-8 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl hover:bg-white/10 hover:border-white/20 transition-all duration-300 group"
-              >
-                {/* Step Number */}
-                <div className="flex-shrink-0">
-                  <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-600/20 to-purple-600/20 border border-white/10 flex items-center justify-center group-hover:from-blue-600/30 group-hover:to-purple-600/30 transition-all">
-                    <span className="text-3xl font-light text-white/60 group-hover:text-white transition-colors">
-                      {String(index + 1).padStart(2, '0')}
-                    </span>
+              <StaggerItem key={index}>
+                <div className="flex gap-8 items-start p-8 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl hover:bg-white/10 hover:border-white/20 transition-all duration-300 group">
+                  {/* Step Number */}
+                  <div className="flex-shrink-0">
+                    <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-600/20 to-purple-600/20 border border-white/10 flex items-center justify-center group-hover:from-blue-600/30 group-hover:to-purple-600/30 transition-all">
+                      <span className="text-3xl font-light text-white/60 group-hover:text-white transition-colors">
+                        {String(index + 1).padStart(2, '0')}
+                      </span>
+                    </div>
+                  </div>
+                  
+                  {/* Step Content */}
+                  <div className="flex-1 pt-2">
+                    <h3 className="text-2xl font-normal text-white mb-3 group-hover:text-white transition-colors">
+                      {step.step}
+                    </h3>
+                    <p className="text-white/70 font-light leading-relaxed text-lg">
+                      {step.description}
+                    </p>
                   </div>
                 </div>
-                
-                {/* Step Content */}
-                <div className="flex-1 pt-2">
-                  <h3 className="text-2xl font-normal text-white mb-3 group-hover:text-white transition-colors">
-                    {step.step}
-                  </h3>
-                  <p className="text-white/70 font-light leading-relaxed text-lg">
-                    {step.description}
-                  </p>
-                </div>
-              </div>
+              </StaggerItem>
             ))}
-          </div>
+          </StaggerContainer>
         </div>
       </section>
 
       {/* Stats/Callout Section */}
       <section className="py-20 border-b border-white/10">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+        <StaggerContainer className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="text-center p-8 bg-white/5 border border-white/10 rounded-2xl">
-              <div className="text-4xl font-light text-white mb-3">500+</div>
-              <p className="text-white/70 font-light">Businesses Supported</p>
-            </div>
-            <div className="text-center p-8 bg-white/5 border border-white/10 rounded-2xl">
-              <div className="text-4xl font-light text-white mb-3">10+</div>
-              <p className="text-white/70 font-light">Years Experience</p>
-            </div>
-            <div className="text-center p-8 bg-white/5 border border-white/10 rounded-2xl">
-              <div className="text-4xl font-light text-white mb-3">95%</div>
-              <p className="text-white/70 font-light">Client Satisfaction</p>
-            </div>
+            {[
+              { number: '500+', label: 'Businesses Supported' },
+              { number: '10+', label: 'Years Experience' },
+              { number: '95%', label: 'Client Satisfaction' },
+            ].map((stat, index) => (
+              <StaggerItem key={index}>
+                <div className="text-center p-8 bg-white/5 border border-white/10 rounded-2xl">
+                  <div className="text-4xl font-light text-white mb-3">{stat.number}</div>
+                  <p className="text-white/70 font-light">{stat.label}</p>
+                </div>
+              </StaggerItem>
+            ))}
           </div>
-        </div>
+        </StaggerContainer>
       </section>
 
       {/* CTA Section */}
       <section className="py-24 bg-gradient-to-br from-blue-950/20 via-purple-950/10 to-indigo-950/20">
-        <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
+        <FadeInUp className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
           <h2 className="text-4xl lg:text-6xl font-light text-white mb-6">
             Ready to Get Started?
           </h2>
@@ -519,7 +517,7 @@ export default async function ServiceDetailPage({
               View All Services
             </Link>
           </div>
-        </div>
+        </FadeInUp>
       </section>
 
       <Footer />

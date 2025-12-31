@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
+import { FadeInUp, StaggerContainer, StaggerItem } from './motion-wrapper';
 
 const steps = [
   {
@@ -35,19 +36,19 @@ export default function HowItWorks() {
     <section id="how-it-works" className="relative py-32 bg-gradient-to-b from-slate-950 to-blue-950/20 border-t border-white/5">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* Section Header */}
-        <div className="mb-20 max-w-3xl">
+        <FadeInUp className="mb-20 max-w-3xl">
           <h2 className="text-5xl lg:text-7xl font-light text-white mb-6 leading-tight">
             How It Works
           </h2>
           <p className="text-xl text-white/70 font-light leading-relaxed">
             Our simple, straightforward process takes the stress out of setting up your business. We'll guide you through every step, keeping you informed and involved along the way.
           </p>
-        </div>
+        </FadeInUp>
 
         {/* Steps */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+        <StaggerContainer className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           {steps.map((step, index) => (
-            <div key={index} className="relative">
+            <StaggerItem key={index} className="relative">
               {/* Connector Line */}
               {index < steps.length - 1 && (
                 <div className="hidden lg:block absolute top-20 left-full w-full h-0.5 bg-white/10 -z-10" 
@@ -67,9 +68,9 @@ export default function HowItWorks() {
                   {step.description}
                 </p>
               </div>
-            </div>
+            </StaggerItem>
           ))}
-        </div>
+        </StaggerContainer>
       </div>
     </section>
   );
