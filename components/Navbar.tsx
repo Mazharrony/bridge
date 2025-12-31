@@ -42,23 +42,51 @@ export default function Navbar() {
 
           {/* Center Section - Navigation (Desktop) */}
           <div className="hidden lg:flex items-center space-x-8">
-            {navItems.map((item) => (
-              <a
-                key={item}
-                href={`#${item.toLowerCase().replace(' ', '-')}`}
-                className="text-white/70 font-normal text-sm hover:text-white transition-all relative group py-2"
-              >
-                {item}
-                <span className="absolute bottom-0 left-0 w-0 h-px bg-white transition-all duration-300 group-hover:w-full"></span>
-              </a>
-            ))}
+            <a
+              href="/"
+              className="text-white/70 font-normal text-sm hover:text-white transition-all relative group py-2"
+            >
+              Home
+              <span className="absolute bottom-0 left-0 w-0 h-px bg-white transition-all duration-300 group-hover:w-full"></span>
+            </a>
+            <a
+              href="/services"
+              className="text-white/70 font-normal text-sm hover:text-white transition-all relative group py-2"
+            >
+              Services
+              <span className="absolute bottom-0 left-0 w-0 h-px bg-white transition-all duration-300 group-hover:w-full"></span>
+            </a>
+            <a
+              href="/how-it-works"
+              className="text-white/70 font-normal text-sm hover:text-white transition-all relative group py-2"
+            >
+              How It Works
+              <span className="absolute bottom-0 left-0 w-0 h-px bg-white transition-all duration-300 group-hover:w-full"></span>
+            </a>
+            <a
+              href="/insights"
+              className="text-white/70 font-normal text-sm hover:text-white transition-all relative group py-2"
+            >
+              Insights
+              <span className="absolute bottom-0 left-0 w-0 h-px bg-white transition-all duration-300 group-hover:w-full"></span>
+            </a>
+            <a
+              href="/contact"
+              className="text-white/70 font-normal text-sm hover:text-white transition-all relative group py-2"
+            >
+              Contact
+              <span className="absolute bottom-0 left-0 w-0 h-px bg-white transition-all duration-300 group-hover:w-full"></span>
+            </a>
           </div>
 
           {/* Right Section - CTA (Desktop) */}
           <div className="hidden lg:flex items-center">
-            <button className="bg-white text-slate-950 hover:bg-white/90 px-6 py-2.5 rounded-lg transition-all font-medium text-sm">
+            <a
+              href="/contact"
+              className="bg-white text-slate-950 hover:bg-white/90 px-6 py-2.5 rounded-lg transition-all font-medium text-sm"
+            >
               Book a Consultation
-            </button>
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -77,20 +105,49 @@ export default function Navbar() {
         {isMobileMenuOpen && (
           <div className="lg:hidden pb-6 border-t border-white/10 mt-4 pt-4 bg-slate-950/95 backdrop-blur-md rounded-b-xl">
             <div className="flex flex-col space-y-4">
-              {navItems.map((item) => (
+              <a
+                href="/"
+                className="text-white/80 font-medium hover:text-white transition-colors py-2"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Home
+              </a>
+              <a
+                href="/services"
+                className="text-white/80 font-medium hover:text-white transition-colors py-2"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Services
+              </a>
+              <a
+                href="/how-it-works"
+                className="text-white/80 font-medium hover:text-white transition-colors py-2"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                How It Works
+              </a>
+              <a
+                href="/insights"
+                className="text-white/80 font-medium hover:text-white transition-colors py-2"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Insights
+              </a>
+              <a
+                href="/contact"
+                className="text-white/80 font-medium hover:text-white transition-colors py-2"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Contact
+              </a>
+              <div className="pt-4 border-t border-white/10">
                 <a
-                  key={item}
-                  href={`#${item.toLowerCase().replace(' ', '-')}`}
-                  className="text-white/80 font-medium hover:text-white transition-colors py-2"
+                  href="/contact"
+                  className="block bg-white text-slate-950 hover:bg-white/90 px-6 py-2.5 rounded-lg transition-all font-medium text-sm w-full text-center"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
-                  {item}
-                </a>
-              ))}
-              <div className="pt-4 border-t border-white/10">
-                <button className="bg-white text-slate-950 hover:bg-white/90 px-6 py-2.5 rounded-lg transition-all font-medium text-sm w-full">
                   Book a Consultation
-                </button>
+                </a>
               </div>
             </div>
           </div>

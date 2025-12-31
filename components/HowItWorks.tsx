@@ -1,5 +1,8 @@
 'use client';
 
+import Link from 'next/link';
+import { ArrowRight } from 'lucide-react';
+
 const steps = [
   {
     number: '01',
@@ -37,7 +40,7 @@ export default function HowItWorks() {
             How It Works
           </h2>
           <p className="text-xl text-white/70 font-light leading-relaxed">
-            A streamlined process designed to get your business operational in Dubai efficiently and effectively.
+            Our simple, straightforward process takes the stress out of setting up your business. We'll guide you through every step, keeping you informed and involved along the way.
           </p>
         </div>
 

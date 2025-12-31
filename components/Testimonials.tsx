@@ -8,7 +8,7 @@ const testimonials = [
     company: "Technology Sector"
   },
   {
-    quote: "The team's understanding of mainland company requirements and their network of local partners was invaluable. We're now fully operational and growing steadily.",
+    quote: "The team&apos;s understanding of mainland company requirements and their network of local partners was invaluable. We&apos;re now fully operational and growing steadily.",
     author: "Ahmed Hassan",
     role: "Founder, Global Trading Co.",
     company: "Trading & Distribution"
@@ -37,7 +37,7 @@ export default function Testimonials() {
             Client Success Stories
           </h2>
           <p className="text-xl text-white/70 font-light leading-relaxed">
-            Hear from businesses that have successfully established and grown their presence in Dubai with our support.
+            Don&apos;t just take our word for it – hear directly from our clients about their experience working with us. We&apos;re proud of the relationships we&apos;ve built and the success stories we&apos;ve helped create.
           </p>
         </div>
 

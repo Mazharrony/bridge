@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 
 export default function Contact() {
@@ -11,18 +12,24 @@ export default function Contact() {
             Ready to Begin Your Journey?
           </h2>
           <p className="text-xl lg:text-2xl text-white/70 font-light leading-relaxed mb-12 max-w-2xl mx-auto">
-            Let's discuss how BRIDGE can help you establish and grow your business in Dubai. Book a free consultation with our experts today.
+            Ready to start your Dubai business journey? We&apos;d love to chat! Book a free, no-obligation consultation with our friendly team. No pressure, just helpful advice and answers to all your questions.
           </p>
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-            <button className="group bg-white text-slate-950 hover:bg-white/90 px-8 py-4 rounded-lg font-medium text-base transition-all duration-300 flex items-center justify-center gap-2">
+            <Link
+              href="/contact"
+              className="group bg-white text-slate-950 hover:bg-white/90 px-8 py-4 rounded-lg font-medium text-base transition-all duration-300 flex items-center justify-center gap-2"
+            >
               Book a Free Consultation
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </button>
-            <button className="bg-white/10 backdrop-blur-md border border-white/20 hover:bg-white/20 hover:border-white/30 text-white px-8 py-4 rounded-lg font-medium text-base transition-all duration-300">
+            </Link>
+            <Link
+              href="/contact"
+              className="bg-white/10 backdrop-blur-md border border-white/20 hover:bg-white/20 hover:border-white/30 text-white px-8 py-4 rounded-lg font-medium text-base transition-all duration-300 text-center"
+            >
               Schedule a Call
-            </button>
+            </Link>
           </div>
 
           {/* Contact Information */}

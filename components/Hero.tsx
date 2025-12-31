@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 
 export default function Hero() {
@@ -37,18 +38,24 @@ export default function Hero() {
             
             {/* Subheading */}
             <p className="text-xl lg:text-2xl text-white/80 leading-relaxed max-w-2xl font-light">
-              Strategic business development, market entry, and corporate advisory services for local and international companies.
+              Your trusted partner for business success in Dubai. We&apos;re here to make your market entry smooth, your setup hassle-free, and your growth unstoppable. Let&apos;s build something great together.
             </p>
 
             {/* CTAs */}
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
-              <button className="group bg-white text-slate-950 hover:bg-white/90 px-8 py-4 rounded-lg font-medium text-base transition-all duration-300 flex items-center justify-center gap-2 w-full sm:w-auto">
+              <Link 
+                href="/contact"
+                className="group bg-white text-slate-950 hover:bg-white/90 px-8 py-4 rounded-lg font-medium text-base transition-all duration-300 flex items-center justify-center gap-2 w-full sm:w-auto"
+              >
                 Book a Free Consultation
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </button>
-              <button className="bg-white/10 backdrop-blur-md border border-white/20 hover:bg-white/20 hover:border-white/30 text-white px-8 py-4 rounded-lg font-medium text-base transition-all duration-300 w-full sm:w-auto">
+              </Link>
+              <Link 
+                href="/services"
+                className="bg-white/10 backdrop-blur-md border border-white/20 hover:bg-white/20 hover:border-white/30 text-white px-8 py-4 rounded-lg font-medium text-base transition-all duration-300 w-full sm:w-auto text-center"
+              >
                 Explore Our Services
-              </button>
+              </Link>
             </div>
 
             {/* Trust Indicators */}

@@ -12,13 +12,16 @@ export default function About() {
             </h2>
             <div className="space-y-6 text-white/80 font-light leading-relaxed text-lg">
               <p>
-                With over a decade of experience in the UAE market, BRIDGE has established itself as a trusted partner for businesses seeking to establish, grow, or expand their presence in Dubai and across the Emirates.
+                Welcome to BRIDGE! We&apos;re a friendly, approachable team of business development experts who&apos;ve been helping companies succeed in Dubai for over a decade. Think of us as your knowledgeable friends who happen to know everything about setting up and growing businesses in the UAE.
               </p>
               <p>
-                Our deep understanding of local regulations, market dynamics, and business culture enables us to provide strategic guidance that goes beyond simple compliance. We help you navigate the complexities of the UAE business landscape with confidence and clarity.
+                What makes us different? We genuinely care about your success. We&apos;re not just another consultancy – we&apos;re your partners on this journey. Our team takes the time to understand your unique situation, goals, and challenges. We&apos;ve helped over 500 businesses, and we&apos;d love to help yours too.
               </p>
               <p>
-                Whether you're a startup looking to establish your first international presence or an established company seeking to optimize your operations, our team of experts is dedicated to your success.
+                Whether you&apos;re a startup taking your first steps into international markets, or an established company looking to expand into Dubai, we&apos;re here to make the process smooth, transparent, and stress-free. We believe in building relationships, not just completing transactions. Your success is our success, and we&apos;re with you every step of the way.
+              </p>
+              <p>
+                Our friendly approach doesn&apos;t mean we&apos;re not serious about business – we are! We&apos;re professional, experienced, and results-driven. But we also believe that business can be done with a smile, clear communication, and genuine care for our clients. That&apos;s the BRIDGE way.
               </p>
             </div>
           </div>
@@ -26,30 +29,30 @@ export default function About() {
           {/* Right Column - Features */}
           <div className="space-y-6">
             <div className="p-8 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl">
-              <h3 className="text-2xl font-normal text-white mb-4">Deep Market Knowledge</h3>
+              <h3 className="text-2xl font-normal text-white mb-4">We Really Know Our Stuff</h3>
               <p className="text-white/60 font-light leading-relaxed">
-                Over 10 years of hands-on experience working with businesses across various industries in the UAE, providing us with unmatched insights into market trends and opportunities.
+                After 10+ years working with businesses of all sizes and industries, we&apos;ve seen it all. This experience means we can anticipate challenges before they happen and guide you around potential pitfalls.
               </p>
             </div>
 
             <div className="p-8 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl">
-              <h3 className="text-2xl font-normal text-white mb-4">Comprehensive Solutions</h3>
+              <h3 className="text-2xl font-normal text-white mb-4">We&apos;ve Got Your Back</h3>
               <p className="text-white/60 font-light leading-relaxed">
-                From initial market research to ongoing business support, we offer end-to-end services that cover every aspect of your business journey in the UAE.
+                From your first question to ongoing support years later, we&apos;re here for you. Our comprehensive services mean you don&apos;t have to juggle multiple vendors – we handle everything you need.
               </p>
             </div>
 
             <div className="p-8 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl">
-              <h3 className="text-2xl font-normal text-white mb-4">Proven Track Record</h3>
+              <h3 className="text-2xl font-normal text-white mb-4">Success That Speaks for Itself</h3>
               <p className="text-white/60 font-light leading-relaxed">
-                Successfully supported over 500 businesses in their UAE market entry and expansion, with a focus on sustainable growth and long-term success.
+                Over 500 businesses can&apos;t be wrong! Our clients come back to us because we deliver results. Many have grown from startups to thriving companies, and we&apos;re proud to have been part of their journey.
               </p>
             </div>
 
             <div className="p-8 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl">
-              <h3 className="text-2xl font-normal text-white mb-4">Personalized Approach</h3>
+              <h3 className="text-2xl font-normal text-white mb-4">You&apos;re Not Just Another Number</h3>
               <p className="text-white/60 font-light leading-relaxed">
-                Every business is unique. We tailor our services to your specific needs, industry requirements, and strategic objectives, ensuring solutions that work for you.
+                We take the time to understand what makes your business special. Your goals become our goals, and we customize our approach to fit exactly what you need. No cookie-cutter solutions here.
               </p>
             </div>
           </div>
